@@ -1,0 +1,32 @@
+# If we save PDFs, we get merge conflicts (has happened before)
+outputs/*.pdf
+outputs/*/
+
+__pycache__/
+.DS_Store
+*.local.*
+tmp/
+*.pyc
+.pytest_cache/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+vpenv/
+.env

@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vp"
+version = "0.0.1"
+authors = [
+    {name="VIKING authors"}
+]
+description = "Experiment code for VIKING: Deep variational inference with stochastic projections"
+readme = "README.md"
+requires-python=">=3.10"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "optax",
+    "matfree",
+    "tqdm",
+    "matplotlib",
+    "flax",
+    "tensorflow-cpu",
+    "tensorflow-datasets",
+    "jupyter",
+    "scikit-learn",
+    "pytest",
+    "pre-commit",
+    "pandas", # for the stats-example
+    "pytest_cases",
+    "tree-math",
+    "equinox>=0.12.1",
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
+    "python-dotenv>=1.1.0",
+    "jax[cuda12]>=0.5.3",
+    "lpips_j",
+]
+
+
+
+[tool.setuptools.packages.find]
+where = ["src"]  # list of folders that contain the packages (["."] by default)
+include = ["vp*"]  # package names should match these glob patterns (["*"] by default)
+
+
+[tool.setuptools_scm]
+version_file = "src/vp/_version.py"
+
+[project.urls]
+"Issue tracker" = "https://github.com/eugene/viking-paper-experiments/issues"
+
+# Disable notebook support because if we auto-format notebooks while they're open,
+# weird things happen
+[tool.ruff]
+extend-exclude = ["*.ipynb"]
+
+[tool.ruff.lint]
+# Enable import-sorting
+extend-select = ["I"]
+# Ignore E731 (Do not assign a `lambda` expression, use a `def`)
+ignore = ["E731"]
