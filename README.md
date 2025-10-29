@@ -1,6 +1,6 @@
 # Introduction
 
-This repository contains the code for the experiments described in the paper "VIKING: Deep variational inference with stochastic projections".
+This repository contains the code for the experiments described in the paper [VIKING: Deep variational inference with stochastic projections](https://arxiv.org/abs/2510.23684).
 
 💡 If you're interested in building on top of the method described in the paper, we have also released [a library](https://github.com/fadel/viking) for that use case!
 
